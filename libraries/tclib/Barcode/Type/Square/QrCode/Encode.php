@@ -47,7 +47,7 @@ abstract class Encode extends \Com\Tecnick\Barcode\Type\Square\QrCode\EncodingMo
         $inputitem['bstream'] = $this->appendNum($inputitem['bstream'], 4, $val);
         $inputitem['bstream'] = $this->appendNum(
             $inputitem['bstream'],
-            $this->getLengthIndicator(Data::$encodingModes['NM'], $version),
+            $this->getLengthIndicator(Data::$encodingModes['NM']),
             $inputitem['size']
         );
         for ($i=0; $i < $words; ++$i) {
@@ -82,7 +82,7 @@ abstract class Encode extends \Com\Tecnick\Barcode\Type\Square\QrCode\EncodingMo
         $inputitem['bstream'] = $this->appendNum($inputitem['bstream'], 4, 0x02);
         $inputitem['bstream'] = $this->appendNum(
             $inputitem['bstream'],
-            $this->getLengthIndicator(Data::$encodingModes['AN'], $version),
+            $this->getLengthIndicator(Data::$encodingModes['AN']),
             $inputitem['size']
         );
         for ($idx = 0; $idx < $words; ++$idx) {
@@ -111,7 +111,7 @@ abstract class Encode extends \Com\Tecnick\Barcode\Type\Square\QrCode\EncodingMo
         $inputitem['bstream'] = $this->appendNum($inputitem['bstream'], 4, 0x4);
         $inputitem['bstream'] = $this->appendNum(
             $inputitem['bstream'],
-            $this->getLengthIndicator(Data::$encodingModes['8B'], $version),
+            $this->getLengthIndicator(Data::$encodingModes['8B']),
             $inputitem['size']
         );
         for ($idx = 0; $idx < $inputitem['size']; ++$idx) {
@@ -134,7 +134,7 @@ abstract class Encode extends \Com\Tecnick\Barcode\Type\Square\QrCode\EncodingMo
         $inputitem['bstream'] = $this->appendNum($inputitem['bstream'], 4, 0x8);
         $inputitem['bstream'] = $this->appendNum(
             $inputitem['bstream'],
-            $this->getLengthIndicator(Data::$encodingModes['KJ'], $version),
+            $this->getLengthIndicator(Data::$encodingModes['KJ']),
             (int)($inputitem['size'] / 2)
         );
         for ($idx = 0; $idx < $inputitem['size']; $idx += 2) {

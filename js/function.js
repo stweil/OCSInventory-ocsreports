@@ -132,13 +132,11 @@ function changerCouleur(obj, state) {
         fcolor = obj.style.color;
         obj.style.backgroundColor = '#FFDAB9';
         obj.style.color = 'red';
-        return true;
     } else {
         obj.style.backgroundColor = bcolor;
         obj.style.color = fcolor;
-        return true;
     }
-    return false;
+    return true;
 }
 
 function delete_cookie(name) {

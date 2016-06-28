@@ -462,13 +462,7 @@ function IsLeapYear()
 {
     if ((this.Year % 4) == 0)
     {
-        if ((this.Year % 100 == 0) && (this.Year % 400) != 0)
-        {
-            return false;
-        } else
-        {
-            return true;
-        }
+        return !((this.Year % 100 == 0) && (this.Year % 400) != 0);
     } else
     {
         return false;
